@@ -21,19 +21,27 @@ int main()
 void startClicker(Counter& counter)
 {
     int n;
-    char k;
-    
+    char k, ans;
+
     cout<<"\nYour budget is 9999 ($99.99)\n\n";
     do
     {
-        cout<<"Add cost of item (press 'o' to turn off): ";
+        cout<<"Add cost of item (press 'o' to turn off)\n";
 
-        cin>>k;
-        if (k == 'o')
-            break;
-        cin>>n;
+        while(true)
+        {
+            cin>>k;
+            if (k == 'o')
+                break;
+            cin>>n;
 
-        counter.setAmount(k,n);
-        cout<<"\nDisplay of amount spent: "<<counter.getCurrentAmount()<<"\n\n";
-    }while(!counter.overFlow());
+            counter.setAmount(k,n);
+            cout<<"Amount Display: "<<counter.getCurrentAmount()<<endl;
+        }
+
+        cout<<"Add another item to shopping cart (y/n)? ";
+        cin>>ans;
+        cout<<endl<<endl;
+
+    }while(!counter.overFlow() && ans == 'y');
 }
