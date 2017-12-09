@@ -1,8 +1,7 @@
 /*---------------------------------------------------------------------
 This is the header file counter.h. This is the interface for the class
-class Counter. Values of this type represent a clicker that keeps a 
-tally of the amount of money a person has spent so far at a grocery
-store.
+Counter. Values of this type represent a clicker that keeps a tally of
+the amount of money a person has spent so far at a grocery store.
 
 Author: Chibuikem Amaechi
 Email:  cramaechi@me.com
